@@ -66,7 +66,13 @@ const useStyles = makeStyles((theme) => ({
         color: '#2e3191'
     },
     logo: {
-        borderRadius: '10px' 
+        borderRadius: '10px' ,
+        width: '300px',
+        height: '200px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100px',
+            height: '100px',
+        },
     }
 }))
 
