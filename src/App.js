@@ -1,8 +1,9 @@
 
-import './App.css';
+// import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Landing from "./screens/landing";
+// import Landing from "./screens/landing";
+import Landing from "./screens/itemdisplaypage";
 import { Provider as ProductsProvider } from "./context/productsContext";
 
 function App() {

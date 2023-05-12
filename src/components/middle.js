@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';  //useState
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Icon } from "@material-ui/core";
+import { Grid } from "@material-ui/core";  //Icon
 import { Context as ProductsContext } from "../context/productsContext";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -66,8 +66,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#2e3191'
     },
     logo: {
+        position: 'relative',
         borderRadius: '10px' ,
-        width: '300px',
+        objectfit: 'contain',
+        width: '100%',
         height: '200px',
         [theme.breakpoints.down('sm')]: {
             width: '100px',
@@ -93,6 +95,7 @@ const Midsection = () => {
 
         <div className={classes.root}>
 
+            
             <Grid container direction="row" >
                 {ProductsList.map(products => (
                     <Grid className={classes.paper} item lg={3} md={3} sm={3} xs={12}>
@@ -100,7 +103,7 @@ const Midsection = () => {
                             <img src={"http://173.82.235.105:3009/" + products.product_img} alt={"logo01"} className={classes.logo} />
                             <h1 className={classes.header}>{products.product_name}</h1>
                             <p className={classes.description}>{products.product_description}</p>
-                            <h1 className={classes.price}>₹{products.product_price}</h1>
+                            <h1 className={classes.price}>${products.product_price}</h1>
                             <div style={{ display: 'flex', flexDirection: 'row' }}>
                                 <AddIcon sx={{ fontSize: "50px" }}></AddIcon>
                                 <label className={classes.value}>1</label>

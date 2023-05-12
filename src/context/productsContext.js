@@ -14,11 +14,11 @@ const ProductsReducer = (state, action) => {
     }
 };
 
-const config = {
-    headers: {
-        "Content-Type": "application/json",
-    },
-};
+// const config = {
+//     headers: {
+//         "Content-Type": "application/json",
+//     },
+// };
 
 const getAllProducts = (dispatch) => async () => {
     try {
